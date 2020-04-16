@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminController">
+   <top>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="usersLabel" layoutX="20.0" layoutY="10.0" styleClass="albumsLabel" text="Users" textFill="#5569da" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="AppleMyungjo Regular" size="48.0" />
+               </font>
+            </Label>
+            <Button fx:id="logOutButton" contentDisplay="CENTER" layoutX="433.0" layoutY="30.0" mnemonicParsing="false" onAction="#logOutPressed" styleClass="logoutButton" text="Log Out" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <ListView fx:id="usersListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="40.0" right="40.0" top="20.0" />
+         </BorderPane.margin>
+      </ListView>
+   </center>
+   <bottom>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="deleteUserButton" layoutX="20.0" layoutY="50.0" mnemonicParsing="false" onAction="#deleteUserPressed" styleClass="deleteButton" text="Delete" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button fx:id="createNewUserButton" layoutX="480.0" layoutY="50.0" mnemonicParsing="false" onAction="#createUserPressed" styleClass="createButton" text="Create" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </bottom>
+
+   <stylesheets>
+      <URL value="@buttons.css" />
+   </stylesheets>
+
+</BorderPane>

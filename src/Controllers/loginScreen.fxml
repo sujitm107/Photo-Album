@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginScreenController">
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="243.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="usernameTextField" promptText="username" styleClass="text-field">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="150.0" right="150.0" top="60.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="AppleMyungjo Regular" size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="loginButton" alignment="CENTER" cache="true" mnemonicParsing="false" onAction="#loginPressed" prefHeight="35.0" prefWidth="85.0" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="Lust-Didone" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="270.0" top="40.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeButtonPressed" styleClass="closeButton" text="Close">
+                     <VBox.margin>
+                        <Insets left="270.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <Label fx:id="photosLabel" alignment="CENTER" text="Photos" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Blenny Black" size="59.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+
+   <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
+
+</BorderPane>
