@@ -79,6 +79,8 @@ public class AlbumDetailController implements Initializable {
         column2.setCellValueFactory(new PropertyValueFactory<>("caption"));
         column1.setCellValueFactory(new PropertyValueFactory<>("photo"));
 
+        column1.getStyleClass().add( "custom-align");
+
         albumTableView.setItems(albumsObservableList);
         //albumTableView.getColumns().addAll(column1, column2);
 
@@ -250,25 +252,6 @@ public class AlbumDetailController implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
-
-
-    //public void addPhotoToAlbum(PhotoDetail photo){
-        //System.out.println("Photo passed to Album screen: " + photo.filePathLocal + " caption : " + photo.caption + " date: " + photo.time);
-
-        //NOW MUST ADD PHOTO TO ALBUM
-        //System.out.println("Current Album : " + currentAlbum.name);
-//      currentAlbum.addPhoto(photo);
-//        System.out.println("added photo");
-//
-//        for(int i = 0; i < currentAlbum.photos.size(); i++){
-//            System.out.println(currentAlbum.photos.get(i).caption);
-//        }
-   // }
-
-//    @FXML
-//    private void photoSelected(MouseEvent e){
-//        System.out.println("Picture clicked in table view");
-//    }
 
     /**
      * Allows user to pass the current User and Album into this screen

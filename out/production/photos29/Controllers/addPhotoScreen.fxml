@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddPhotoController">
+   <top>
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="newPhotoLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="albumsLabel" text="New Photo" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backPressed" styleClass="backButton" text="Back" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+            <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#logOutPressed" styleClass="logoutButton" text="Log Out" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="75.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+               <children>
+                  <Button fx:id="pickComputerButton" mnemonicParsing="false" onAction="#pickComputerPressed" styleClass="secondaryButton1" text="Pick From Computer">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="pickStockButton" mnemonicParsing="false" onAction="#pickStockPressed" prefHeight="29.0" prefWidth="149.0" styleClass="secondaryButton2" text="Pick Stock Image" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <Button fx:id="addPhotoButton" mnemonicParsing="false" onAction="#addPhotoPressed" styleClass="createButton" text="Add Photo" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <FlowPane alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0">
+               <children>
+                  <ImageView fx:id="photoImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <HBox prefHeight="27.0" prefWidth="276.0">
+                     <children>
+                        <TextField fx:id="tagsTextField" alignment="CENTER" prefHeight="33.0" prefWidth="119.0" promptText="Tag" styleClass="text-field" />
+                        <ComboBox fx:id="tagTypeComboBox" onAction="#tagTypeSelected" onMouseClicked="#addTagsCombo" prefHeight="33.0" prefWidth="112.0" promptText="Type" styleClass="text-field">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin></ComboBox>
+                        <Button fx:id="addTagButton" mnemonicParsing="false" onAction="#addTagPressed" prefWidth="120.0" styleClass="createButton" text="+Tag" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="captionsTextField" alignment="CENTER" promptText="Enter Caption" styleClass="text-field">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </FlowPane>
+   </center>
+
+    <stylesheets>
+        <URL value="@buttons.css" />
+    </stylesheets>
+</BorderPane>

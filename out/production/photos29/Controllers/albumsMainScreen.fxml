@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AlbumsMainController">
+   <top>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="albumsLabel" layoutX="20.0" layoutY="10.0" styleClass="albumsLabel" text="Albums" textFill="#612961" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font name="AppleMyungjo Regular" size="48.0" />
+               </font>
+            </Label>
+            <Button fx:id="logOutButton" layoutX="398.0" layoutY="30.0" mnemonicParsing="false" onAction="#logOutPressed" styleClass="logoutButton" text="Log Out" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="createAlbumButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#createAlbumPressed" styleClass="createButton" text="Create" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+            <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="250.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+               <children>
+                  <Button fx:id="renameAlbumButton" mnemonicParsing="false" onAction="#renameAlbumPressed" styleClass="secondaryButton1" text="Rename">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteAlbumButton" mnemonicParsing="false" onAction="#deleteAlbumPressed" styleClass="deleteButton" text="Delete">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelPressed" styleClass="backButton" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <VBox prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="382.0" spacing="10.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="200.0" />
+               </VBox.margin>
+               <children>
+                  <ComboBox fx:id="searchComboBox" prefHeight="33.0" prefWidth="119.0" styleClass="text-field" />
+                  <TextField fx:id="searchAlbumsTextField" prefHeight="33.0" prefWidth="236.0" promptText="Search Albums" styleClass="text-field" />
+                  <Button fx:id="searchButton" cache="true" mnemonicParsing="false" onAction="#searchButtonPressed" prefHeight="27.0" prefWidth="93.0" styleClass="searchButton" text="Search" />
+               </children>
+            </HBox>
+            <ListView fx:id="AlbumsListView" onMouseClicked="#goToAlbumDetailScreen" prefHeight="200.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
+            </ListView>
+            <Button fx:id="selectAlbumButton" mnemonicParsing="false" onAction="#selectPressed" styleClass="secondaryButton2" text="Select Album">
+               <VBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></VBox>
+   </center>
+
+   <stylesheets>
+      <URL value="@buttons.css" />
+   </stylesheets>
+
+</BorderPane>
